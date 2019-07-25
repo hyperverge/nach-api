@@ -1,5 +1,4 @@
 
-
 ## HyperVerge NACH API Documentation
 
 The NACH API contains two endpoints:
@@ -62,33 +61,33 @@ Please do not expose the appId and appKey on browser applications. In case of a 
 	List of fields to passed in request body json
 
 	
-	| Field |  Type| Compulsory|
-	|---|---|--|
-	| UMRN|String| yes|
-	| nachDate|"MM/DD/YYYY"|yes|
-	| sponsorCode|String|yes|
-	| utilityCode|String|yes|
-	| bankName|String|yes|
-	| accountType|"SB"/"CA"/"CC"/"SB-NRO"/"SB-		NRE"/"Others"|yes|
-	| IFSCCode|String|yes|
-	| MICR|String|
-	| companyName|String|yes|
-	| frequency|"monthly"/"quarterly"/"half-	yearly"/"yearly"/"As and when present"|yes|	
-	| amountInNumber|String|yes|
-	| amountInWords|String|yes|
-	| debitType|String|yes|
-	| startDate|"MM/DD/YYYY"|yes|
+	| Field |  Type| Maximum length | Compulsory|
+	|---|---|--|--|
+	| UMRN|String| 20| yes|
+	| nachDate|"MM/DD/YYYY"||yes|
+	| sponsorCode|String|11| yes|
+	| utilityCode|String|18| yes|
+	| bankName|String|30| yes|
+	| accountType|"SB"/"CA"/"CC"/"SB-NRO"/"SB-NRE"/"Others"||yes|
+	| IFSCCode|String|11|yes|
+	| MICR|String|9||
+	| companyName|String|30|yes|
+	| frequency|"monthly"/"quarterly"/"half-yearly"/"yearly"/"As and when present"||yes|	
+	| amountInNumber|String|10|yes|
+	| amountInWords|String|30|yes|
+	| debitType|"fixedAmount"/"maximumAmount"||yes|
+	| startDate|"MM/DD/YYYY"||yes|
 	| endDate|"MM/DD/YYYY"|
 	| untilCanceled|"yes"/"no"|
-	| NACHType|"create" / "modify" / "cancel"|yes|
-	| phoneNumber|String|
-	| emailId|String|
-	| reference1|String|
-	| reference2|String|
-	| primaryAccountHolder|String|yes|
-	| secondaryAccountHolder|String|
-	| tertiaryAccountHolder|String|
-	| logo|String(will be shared by Hyperverge for different clients) |yes|
+	| NACHType|"create" / "modify" / "cancel"||yes|
+	| phoneNumber|String|10|
+	| emailId|String|30|
+	| reference1|String|25|
+	| reference2|String|25|
+	| primaryAccountHolder|String|22|yes|
+	| secondaryAccountHolder|String|22
+	| tertiaryAccountHolder|String|22
+	| logo|String(will be shared by Hyperverge for different clients)|5 |yes|
 	
 	
 ### Response Structure
@@ -272,30 +271,30 @@ Please do not expose the appId and appKey on browser applications. In case of a 
 
 	|Field Key | Value Type |
 	|---|---|
-	|UMRN|String|
-	|nachDate|"MM/DD/YYYY"|
-	|sponsorCode|String|
-	|utilityCode|String|
-	|bankName|String|
-	|accountType|"SB"/"CA"/"CC"/"SB-NRO"/"SB-NRE"/"Others"|
-	|IFSCCode|String|
-	|MICR|String|
-	|customerName|String|
-	|frequency|"monthly"/"quarterly"/"half-yearly"/"yearly"/"As and when present"|
-	|amountInNumber|String|
-	|amountInWords|String|
-	|debitType|String|
-	|startDate|"MM/DD/YYYY"|
-	|endDate|"MM/DD/YYYY"|
-	|untilCanceled|"yes"/"no"|
-	|NACHType|"create" / "modify" / "cancel"|
-	|phoneNumber|String|
-	|emailId|String|
-	|reference1|String|
-	|reference2|String|
-	|signaturePresentPrimary|"yes","no"|
-	|signaturePresentSecondary|"yes","no"|
-	|signaturePresentTertiary|"yes","no"|
-	|primaryAccountHolder|String|
-	|secondaryAccountHolder|String|
-	|tertiaryAccountHolder|String|
+	| UMRN|String|
+	| nachDate|"MM/DD/YYYY"|
+	| sponsorCode|String|
+	| utilityCode|String|
+	| bankName|String|
+	| accountType|"SB"/"CA"/"CC"/"SB-NRO"/"SB-NRE"/"Others"|
+	| IFSCCode|String|
+	| MICR|String|
+	| customerName|String|
+	| frequency|"monthly"/"quarterly"/"half-yearly"/"yearly"/"As and when present"|
+	| amountInNumber|String|
+	| amountInWords|String|
+	| debitType|String|
+	| startDate|"MM/DD/YYYY"|
+	| endDate|"MM/DD/YYYY"|
+	| untilCanceled|"yes"/"no"|
+	| NACHType|"create" / "modify" / "cancel"|
+	| phoneNumber|String|
+	| emailId|String|
+	| reference1|String|
+	| reference2|String|
+	| signaturePresentPrimary|"yes","no"|
+	| signaturePresentSecondary|"yes","no"|
+	| signaturePresentTertiary|"yes","no"|
+	| primaryAccountHolder|String|
+	| secondaryAccountHolder|String|
+	| tertiaryAccountHolder|String|
