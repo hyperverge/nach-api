@@ -67,11 +67,11 @@ Please do not expose the appId and appKey on browser applications. In case of a 
 	| nachDate|"MM/DD/YYYY"||yes|
 	| sponsorCode|String|11| yes|
 	| utilityCode|String|18| yes|
-	| bankName|String|30| yes|
+	| bankName|String|45| yes|
 	| accountType|"SB"/"CA"/"CC"/"SB-NRO"/"SB-NRE"/"Others"||yes|
 	| IFSCCode|String|11|yes|
 	| MICR|String|9||
-	| companyName|String|30|yes|
+	| companyName|String|50|yes|
 	| frequency|"monthly"/"quarterly"/"half-yearly"/"yearly"/"As and when present"||yes|	
 	| amountInNumber|String|10|yes|
 	| amountInWords|String|30|yes|
@@ -84,9 +84,9 @@ Please do not expose the appId and appKey on browser applications. In case of a 
 	| emailId|String|30|
 	| reference1|String|25|
 	| reference2|String|25|
-	| primaryAccountHolder|String|22|yes|
-	| secondaryAccountHolder|String|22
-	| tertiaryAccountHolder|String|22
+	| primaryAccountHolder|String|32|yes|
+	| secondaryAccountHolder|String|27
+	| tertiaryAccountHolder|String|26
 	| logo|String(will be shared by Hyperverge for different clients)|5 |yes|
 	
 	
